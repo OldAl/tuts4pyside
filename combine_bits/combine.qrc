@@ -1,0 +1,7 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+<file alias="quit.png">select_tango/32x32/actions/system-log-out.png</file>
+<file alias="about.png">select_tango/32x32/apps/preferences-system-session.png</file>
+<file alias="showgpl.png">select_tango/32x32/apps/help-browser.png</file>
+</qresource>
+</RCC>

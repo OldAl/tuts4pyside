@@ -1,0 +1,255 @@
+================================
+SOLUTION FOR sdtruss4.dat
+================================
+# sdtruss4.dat - Statically Determinate Complex Truss #4
+# "Basic Concepts of Structural Analysis" AS Hall and AP Kabaila,
+# Pitman Pub. (c) A Hall and AP Kabaila 1977 - aka "Basic Concepts".
+# Ref. "Basic Concepts" p61 Fig. 4.7
+# Flags - decoration for this program
+general
+#   noNodes, noMembers, noAuxiliaries
+g  6        9          3
+g  3
+nodes
+# Nodal list
+# t no  x   y
+t 1   0   0
+t 2   0   6
+t 3   5   11
+t 4   13  11
+t 5   18  6
+t 6   18  0
+#auxiliaries
+t 7   0   4
+t 8   22  0
+t 9   18  4
+members
+t 1  1  2
+t 2  2  3
+t 3  3  4
+t 4  4  5
+t 5  6  5
+t 6  1  4
+t 7  1  5
+t 8  2  6
+t 9  3  6
+# Auxiliary members next
+t 10 1  7
+t 11 6  8
+t 12 6  9
+loads
+# node  X load, Y load
+2     4       0
+3     0      -7
+4     11      0
+end
+
+*** Data Echo Finished ***
+echo of "general" flag.
+# sdtruss4.dat - Statically Determinate Complex Truss #4
+# "Basic Concepts of Structural Analysis" AS Hall and AP Kabaila,
+# Pitman Pub. (c) A Hall and AP Kabaila 1977 - aka "Basic Concepts".
+# Ref. "Basic Concepts" p61 Fig. 4.7
+# Flags - decoration for this program
+ general
+#   noNodes, noMembers, noAuxiliaries
+ g  6        9          3
+ g  3
+noLoadLines = 3
+ nodes
+# Nodal list
+# t no  x   y
+  t 1   0   0
+Node freedoms 1 2
+  t 2   0   6
+Node freedoms 3 4
+  t 3   5   11
+Node freedoms 5 6
+  t 4   13  11
+Node freedoms 7 8
+  t 5   18  6
+Node freedoms 9 10
+  t 6   18  0
+Node freedoms 11 12
+#auxiliaries
+  t 7   0   4
+Node freedoms 13 14
+  t 8   22  0
+Node freedoms 15 16
+  t 9   18  4
+Node freedoms 17 18
+nodes =
+1 (1, 0.0, 0.0, 1, 2)
+2 (2, 0.0, 6.0, 3, 4)
+3 (3, 5.0, 11.0, 5, 6)
+4 (4, 13.0, 11.0, 7, 8)
+5 (5, 18.0, 6.0, 9, 10)
+6 (6, 18.0, 0.0, 11, 12)
+7 (7, 0.0, 4.0, 13, 14)
+8 (8, 22.0, 0.0, 15, 16)
+9 (9, 18.0, 4.0, 17, 18)
+ members
+  t 1  1  2
+  t 2  2  3
+  t 3  3  4
+  t 4  4  5
+  t 5  6  5
+  t 6  1  4
+  t 7  1  5
+  t 8  2  6
+  t 9  3  6
+# Auxiliary members next
+  t 10 1  7
+  t 11 6  8
+  t 12 6  9
+members =
+1 (1, 1, 2)
+2 (2, 2, 3)
+3 (3, 3, 4)
+4 (4, 4, 5)
+5 (5, 6, 5)
+6 (6, 1, 4)
+7 (7, 1, 5)
+8 (8, 2, 6)
+9 (9, 3, 6)
+10 (10, 1, 7)
+11 (11, 6, 8)
+12 (12, 6, 9)
+(1, 1, 2)
+member_no, locvec = 1   1 2 3 4
+direction cosines = 0.0 1.0
+(2, 2, 3)
+member_no, locvec = 2   3 4 5 6
+direction cosines = 0.707106781187 0.707106781187
+(3, 3, 4)
+member_no, locvec = 3   5 6 7 8
+direction cosines = 1.0 0.0
+(4, 4, 5)
+member_no, locvec = 4   7 8 9 10
+direction cosines = 0.707106781187 -0.707106781187
+(5, 6, 5)
+member_no, locvec = 5   11 12 9 10
+direction cosines = 0.0 1.0
+(6, 1, 4)
+member_no, locvec = 6   1 2 7 8
+direction cosines = 0.763386285369 0.645942241466
+(7, 1, 5)
+member_no, locvec = 7   1 2 9 10
+direction cosines = 0.948683298051 0.316227766017
+(8, 2, 6)
+member_no, locvec = 8   3 4 11 12
+direction cosines = 0.948683298051 -0.316227766017
+(9, 3, 6)
+member_no, locvec = 9   5 6 11 12
+direction cosines = 0.763386285369 -0.645942241466
+(10, 1, 7)
+member_no, locvec = 10   1 2 13 14
+direction cosines = 0.0 1.0
+(11, 6, 8)
+member_no, locvec = 11   11 12 15 16
+direction cosines = 1.0 0.0
+(12, 6, 9)
+member_no, locvec = 12   11 12 17 18
+direction cosines = 0.0 1.0
+memprops =
+1 [1, 2, 3, 4, 0.0, 1.0]
+2 [3, 4, 5, 6, 0.70710678118654746, 0.70710678118654746]
+3 [5, 6, 7, 8, 1.0, 0.0]
+4 [7, 8, 9, 10, 0.70710678118654746, -0.70710678118654746]
+5 [11, 12, 9, 10, 0.0, 1.0]
+6 [1, 2, 7, 8, 0.76338628536911446, 0.64594224146617374]
+7 [1, 2, 9, 10, 0.94868329805051377, 0.31622776601683794]
+8 [3, 4, 11, 12, 0.94868329805051377, -0.31622776601683794]
+9 [5, 6, 11, 12, 0.76338628536911446, -0.64594224146617374]
+10 [1, 2, 13, 14, 0.0, 1.0]
+11 [11, 12, 15, 16, 1.0, 0.0]
+12 [11, 12, 17, 18, 0.0, 1.0]
+Dimension of connection mat ndim =12
+
+Connection matrix
+Matrix of dimensions (12 x 12)
+  0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00
+  7.63386E-01   9.48683E-01   0.00000E+00   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00
+
+  1.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00
+  6.45942E-01   3.16228E-01   0.00000E+00   0.00000E+00   1.00000E+00
+  0.00000E+00   0.00000E+00
+
+  0.00000E+00   7.07107E-01   0.00000E+00   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00   9.48683E-01   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00
+
+ -1.00000E+00   7.07107E-01   0.00000E+00   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00  -3.16228E-01   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00
+
+  0.00000E+00  -7.07107E-01   1.00000E+00   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00   0.00000E+00   7.63386E-01   0.00000E+00
+  0.00000E+00   0.00000E+00
+
+  0.00000E+00  -7.07107E-01   0.00000E+00   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00   0.00000E+00  -6.45942E-01   0.00000E+00
+  0.00000E+00   0.00000E+00
+
+  0.00000E+00   0.00000E+00  -1.00000E+00   7.07107E-01   0.00000E+00
+ -7.63386E-01   0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00
+
+  0.00000E+00   0.00000E+00   0.00000E+00  -7.07107E-01   0.00000E+00
+ -6.45942E-01   0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00
+
+  0.00000E+00   0.00000E+00   0.00000E+00  -7.07107E-01   0.00000E+00
+  0.00000E+00  -9.48683E-01   0.00000E+00   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00
+
+  0.00000E+00   0.00000E+00   0.00000E+00   7.07107E-01  -1.00000E+00
+  0.00000E+00  -3.16228E-01   0.00000E+00   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00
+
+  0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00  -9.48683E-01  -7.63386E-01   0.00000E+00
+  1.00000E+00   0.00000E+00
+
+  0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00   1.00000E+00
+  0.00000E+00   0.00000E+00   3.16228E-01   6.45942E-01   0.00000E+00
+  0.00000E+00   1.00000E+00
+
+ loads
+# node  X load, Y load
+  2     4       0
+  3     0      -7
+  4     11      0
+
+Load matrix =
+Matrix of dimensions (12 x 1)
+  0.00000E+00
+  0.00000E+00
+ -4.00000E+00
+ -0.00000E+00
+ -0.00000E+00
+  7.00000E+00
+ -1.10000E+01
+ -0.00000E+00
+  0.00000E+00
+  0.00000E+00
+  0.00000E+00
+  0.00000E+00
+
+Member Actions, [Ni | Ri] matrix.
+Matrix of dimensions (12 x 1)
+  3.00000E+00
+  1.76777E+00
+  1.10000E+01
+  8.32629E-16
+  7.95886E-16
+ -9.11471E-16
+ -6.54996E-16
+ -5.53399E+00
+ -1.27720E+01
+ -3.00000E+00
+ -1.50000E+01
+  1.00000E+01
+
+matrix condition number = 8.63664027024

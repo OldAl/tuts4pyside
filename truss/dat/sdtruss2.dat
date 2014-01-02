@@ -1,0 +1,42 @@
+# sdtruss2.dat - Statically Determinate Complex Truss #2
+# "Basic Concepts of Structural Analysis" AS Hall and AP Kabaila,
+# Pitman Pub. (c) A Hall and AP Kabaila 1977 - aka "Basic Concepts".
+# Ref. "Basic Concepts" p46 Fig. 4.5
+# Flags - decoration for this program
+ general
+#   noNodes, noMembers, noAuxiliaries
+ g  6        9          3           
+ g  3
+ nodes
+# Nodal list
+# t no  x   y
+  t 1   0   0
+  t 2   12  0
+  t 3   0   9
+  t 4   3   2
+  t 5   5.5 2
+  t 6   3   4
+  t 7   4  0
+  t 8   0  5
+  t 9   12 5
+ members
+  t 1  1  3
+  t 2  1  2  
+  t 3  3  2
+  t 4  4  6
+  t 5  4  5
+  t 6  6  5
+  t 7  3  4
+  t 8  1  5
+  t 9  6  2
+# Auxiliary members next
+  t 10 1  7
+  t 11 1  8
+  t 12 2  9
+ loads
+# node  X load, Y load
+  3     10      0
+  4     0      -19
+  5     17     -20
+ end  
+
