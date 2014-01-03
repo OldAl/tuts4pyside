@@ -1,9 +1,0 @@
-On ubuntu 12.04 LTA licence.py can be started with
-python3 licence.py
-or with
-python  licence.py
-where python3 is python version 3.2.3
-and python is python version 2.7.3
-Al. 2013-04-04
-
-
