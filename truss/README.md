@@ -1,5 +1,12 @@
-Basic Help
----------------
+README.md for section called "truss".
+=====================================
+
+###Warning
+
+The ***truss*** section has not been checked yet and is issued "as is". It is hoped to check it RSN. 2014-01-05  
+
+###Basic Help
+
 The data is created in the Data Page. Alternatively it can be read from a file into the Data Page.  When required it is modified, but only in the Data Page. It is advisable to save the Data Page before beginning any analysis.
 
 The analysis results are stored by the program in the Solution Page.  Some errors in data may cause the program to fail without necessarily displaying any information on the Solution Page.
