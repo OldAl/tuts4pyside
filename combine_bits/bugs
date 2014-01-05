@@ -1,0 +1,18 @@
+2014-01-04
+bug in checking the combine_alter.py
+
+ak@supremo:~/OldAl-tuts/tuts4pyside/combine_bits > python combine_alter.py 
+Traceback (most recent call last):
+  File "combine_alter.py", line 69, in <module>
+    frame = MainWindow()
+  File "combine_alter.py", line 30, in __init__
+    self.ui.actionShow_GPL.triggered.connect(self.showGPL)
+AttributeError: 'Ui_MainWindow' object has no attribute 'actionShow_GPL'
+
+ak@supremo:~/OldAl-tuts/tuts4pyside/combine_bits > python3 combine_alter.py 
+Traceback (most recent call last):
+  File "combine_alter.py", line 69, in <module>
+    frame = MainWindow()
+  File "combine_alter.py", line 30, in __init__
+    self.ui.actionShow_GPL.triggered.connect(self.showGPL)
+AttributeError: 'Ui_MainWindow' object has no attribute 'actionShow_GPL'
