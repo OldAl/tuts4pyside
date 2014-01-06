@@ -13,11 +13,11 @@ and introduced me to github. Learning is easy when expert help is at hand!
 ###PySide Newbie Tutorials
 
 The following are small examples for real newbies:
-''1. about box    - shows about box with os information.
-''2. show licence - reads and displays licence information.
-''3. quit prog    - provides additional button to close program.
-''4. combine bits - combines all of the above into a coherent small program
-''5. truss - solves statically determinate truss, almost real problem.
+1. about box    - shows about box with os information.
+2. show licence - reads and displays licence information.
+3. quit prog    - provides additional button to close program.
+4. combine bits - combines all of the above into a coherent small program
+5. truss - solves statically determinate truss, almost real problem.
 
 The last item of the list develops Python code separately from its GUI. 
  
