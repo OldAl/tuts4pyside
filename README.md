@@ -13,6 +13,7 @@ and introduced me to github. Learning is easy when expert help is at hand!
 ###PySide Newbie Tutorials
 
 The following are small examples for real newbies:
+
 1. about box    - shows about box with os information.
 2. show licence - reads and displays licence information.
 3. quit prog    - provides additional button to close program.
