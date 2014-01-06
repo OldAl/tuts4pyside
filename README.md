@@ -13,17 +13,13 @@ and introduced me to github. Learning is easy when expert help is at hand!
 ###PySide Newbie Tutorials
 
 The following are small examples for real newbies:
+''1. about box    - shows about box with os information.
+''2. show licence - reads and displays licence information.
+''3. quit prog    - provides additional button to close program.
+''4. combine bits - combines all of the above into a coherent small program
+''5. truss - solves statically determinate truss, almost real problem.
 
-    
-    about box    - shows about box with os information.
-    show licence - reads and displays licence information.
-    quit prog    - provides additional button to close program.
-    combine bits - combines all of the above into a coherent small program
-
-The following is an example that shows how a Python code can be developed
-separately from its GUI.
-    
-    truss        - solves statically determinate trusses, a gui example for 
-    an almost real type of problems.
+The last item of the list develops Python code separately from its GUI. 
+ 
 
 

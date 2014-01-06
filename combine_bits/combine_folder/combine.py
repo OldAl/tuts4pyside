@@ -18,6 +18,7 @@ __version__ = '3.1.4'
 
 from ui_combine import Ui_MainWindow
 
+# from . import qrc_combine
 import qrc_combine
 
 class MainWindow(QMainWindow, Ui_MainWindow):
