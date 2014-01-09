@@ -1,11 +1,11 @@
-README.md for section called "truss".
+README.md for section called *truss*.
 =====================================
 
-###Warning
+### Warning
 
-The ***truss*** section has not been checked yet and is issued "as is". It is hoped to check it RSN. 2014-01-05  
+The **truss** section has not been checked yet and is issued "as is". It is hoped to check it RSN. 2014-01-05  
 
-###Basic Help
+### Basic Help
 
 The data is created in the Data Page. Alternatively it can be read from a file into the Data Page.  When required it is modified, but only in the Data Page. It is advisable to save the Data Page before beginning any analysis.
 
@@ -13,7 +13,7 @@ The analysis results are stored by the program in the Solution Page.  Some error
 
 The Solution Page is read only, though it can be saved into a file - with the SaveAs option.
 
-Unlike command line programs, there are no restrictions where the data is stored, nor any restrictions where the results are stored. It is recommended to use *.dat format for the data files and the *.out format for output files. For consistency, all data files are stored in the ./dat subdirectory and all output files are stored in ./out subdirectory.
+Unlike command line programs, there are no restrictions where the data is stored, nor any restrictions where the results are stored. It is recommended to use *.dat format* for the data files and the *.out format* for output files. For consistency, all data files are stored in the ./dat subdirectory and all output files are stored in ./out subdirectory.
 
 It is advisable to be systematic wrt to the above aspect.  All the examples should be stored always in the same directory and all the answers of the standard examples will be stored in another directory which should remain the same relative to the main program.
 

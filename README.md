@@ -7,7 +7,7 @@ Thanks to all the developers of PySide, who shared their work and expertise
 in the PySide system and examples. Particularly thank you for your forbearance 
 and patience when sharing your expertise with the less experienced PySide users. 
 
-I am particularly grateful to Aaron Richiger, who made many valuable suggestions 
+I am particularly grateful to **Aaron Richiger**, who made many valuable suggestions 
 and introduced me to github. Learning is easy when expert help is at hand!
 
 ###PySide Newbie Tutorials
@@ -22,5 +22,5 @@ The following are small examples for real newbies:
 
 The last item of the list develops Python code separately from its GUI. 
  
-
+Al. Kabaila 2014-01-09, Canberra, Australia
 
