@@ -19,7 +19,7 @@ My sincere gratitude to **Aaron Richiger**, a guru of PySide who made some valua
 
 ### Separation into subdirectories
 
-The information shared by the each of the method of combining the three parts of the program (**about_box, quit_prog and show_licence**) are in two directories: **designer** and **icons**. The combine.py, combine_alter.py  and the combine_allin1.py will require the data from **designer** and **icons** directories.  The readme.md in each of these two directories briefly describe what is to be done in each of these.
+The information shared by each of the methods of combining the three parts of the program (**about_box, quit_prog and show_licence**) are in two directories: **designer** and **icons**. The combine.py, combine_alter.py  and the combine_allin1.py will require the data from **designer** and **icons** directories.  The readme.md in each of these two directories briefly describe what is to be done in each of these.
 
 So the directoy structure of **combine_bits** has the following subdirectories:
 

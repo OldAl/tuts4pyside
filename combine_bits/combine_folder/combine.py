@@ -14,12 +14,15 @@ import PySide
 
 from PySide.QtGui import (QApplication, QMainWindow, QMessageBox,  QIcon)
 
-__version__ = '3.1.4'
+__version__ = '3.1.5'
 
 from ui_combine import Ui_MainWindow
 
-# from . import qrc_combine
-import qrc_combine
+if int(platform.python_version()[0]) < 3:
+    import qrc_combine2
+else:
+    import qrc_combine3
+
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
