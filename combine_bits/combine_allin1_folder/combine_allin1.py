@@ -20,10 +20,13 @@ from PySide.QtGui import (QApplication, QMainWindow, QMessageBox,
                           QIcon, QAction, QWidget, QGridLayout,
                           QTextEdit, QMenuBar, QMenu, QStatusBar)
      
-__version__ = '3.0.0'
+__version__ = '3.1.5'
 
-import qrc_combine
-     
+if int(platform.python_version()[0]) < 3:
+    import qrc_combine2
+else:
+    import qrc_combine3
+    
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
@@ -41,14 +44,14 @@ class MainWindow(QMainWindow):
         self.setMenuBar(menubar)
         statusbar = QStatusBar(self)
         self.setStatusBar(statusbar)
-        actionShow_GPL = QAction(self)
-        actionShow_GPL.triggered.connect(self.showGPL)
+        actionShow_CCPL = QAction(self)
+        actionShow_CCPL.triggered.connect(self.showCCPL)
         action_About = QAction(self)
         action_About.triggered.connect(self.about)        
         iconToolBar = self.addToolBar("iconBar.png")
 #------------------------------------------------------
 # Add icons to appear in tool bar - step 1
-        actionShow_GPL.setIcon(QIcon(":/showgpl.png"))
+        actionShow_CCPL.setIcon(QIcon(":/showgpl.png"))
         action_About.setIcon(QIcon(":/about.png"))
         action_Close = QAction(self)
         action_Close.setCheckable(False)
@@ -56,24 +59,26 @@ class MainWindow(QMainWindow):
         action_Close.setIcon(QIcon(":/quit.png"))
 #------------------------------------------------------
 # Show a tip on the Status Bar - step 2
-        actionShow_GPL.setStatusTip("Show CC Licence")
+        actionShow_CCPL.setStatusTip("Show CC Licence")
         action_About.setStatusTip("Pop up the About dialog.")
         action_Close.setStatusTip("Close the program.")
 #------------------------------------------------------
-        menu_File.addAction(actionShow_GPL)
+        menu_File.addAction(actionShow_CCPL)
         menu_File.addAction(action_About)
         menu_File.addAction(action_Close)
         menubar.addAction(menu_File.menuAction())
      
-        iconToolBar.addAction(actionShow_GPL)
+        iconToolBar.addAction(actionShow_CCPL)
         iconToolBar.addAction(action_About)
         iconToolBar.addAction(action_Close)
         action_Close.triggered.connect(self.close)
                  
-    def showGPL(self):
-        '''Read and display CCPL licence.'''
-        with open('CCPL.txt') as nonamefile:
-            self.textEdit.setText(nonamefile.read())               
+    def showCCPL(self):
+        'Read and display CCPL licence.'
+        with open('CCPL.txt') as fi:                  
+            self.textEdit.setText(fi.read())        
+
+                 
            
     def about(self):
         '''Popup a box with about message.'''
