@@ -211,9 +211,8 @@ if __name__ == '__main__':
     else:
         name = 'sdtruss1.dat'
     try:
-        finput = open('dat/' + name, 'r')
-        dataBall = unicode(finput.read())
-        finput.close()
+        with open('dat/' + name, 'r') as finput:
+            dataBall = unicode(finput.read())       
     except IOError:
         print 'Failed to open given file name.'
         sys.exit(1)
