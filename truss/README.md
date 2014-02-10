@@ -1,9 +1,25 @@
-README.md for section called *truss*.
-=====================================
+﻿##README.md for section called **truss**.
 
 ### Warning
 
-The **truss** section has not been checked yet and is issued "as is". It is hoped to check it RSN. 2014-01-05  
+The **truss** section has not been checked yet and is issued "as is". It is hoped to check it RSN. 2014-01-05 
+
+### Operating Truss programs
+
+The truss program can be run as a CLI program without a gui as follows:
+
+*    python ncrunch.py [input file name from dat directory] > [output file name]
+
+For example, to check out sdtruss2, we can find the data for that truss in
+dat/sdtruss2.dat. So to get the output in the current directory, do the following:
+
+*    python ncrunch.py  sdtruss2.dat > sdtruss2.out
+
+To run the program with GUI, enter the following line of code
+
+*    python truss.py
+
+or for file manager, such as Dolphin, double click the truss.py file.    
 
 ### Basic Help
 
