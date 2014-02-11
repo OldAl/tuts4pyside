@@ -133,7 +133,6 @@ class Truss(QMainWindow):
         self.action_Quit =  self.editAction(self.action_Quit, None, 
                             'ctrl+Q', 'quit', 'Quit the program.')                                           
         self.plainTextEdit_2.setReadOnly(True)
-
     
     def setDirty(self):
         '''On change of text in textEdit window, set the flag
@@ -214,10 +213,8 @@ class Truss(QMainWindow):
         else:
             flname = self.filename
             if flname:
-                fl = open(flname, 'w')
-                tempText = self.plainTextEdit.toPlainText()
-                fl.write(tempText)
-                fl.close()
+                with open(flname, 'w') as fl:
+                    fl.write(tempText)
                 self.dirty = False
                 self.updateStatus('File saved.')
                 return True
@@ -252,7 +249,6 @@ class Truss(QMainWindow):
                 fl.write(tempText)
                 fl.close()
 
-
     def trussSolve(self):
         '''Solve a statically determinate truss, specified in
         Data Page and display the results in the Solution Page.
@@ -266,11 +262,6 @@ class Truss(QMainWindow):
         printline('SOLUTION FOR ' + flbase)
         printline('================================') 
         dataBall = self.plainTextEdit.toPlainText()
-##       Diagnostic bit of code follows --------------
-#        fo = open('dataBallFile', 'w')
-#        fo.write(dataBall)
-#        fo.close
-##       Diagnostic end                 --------------
         ncrunch.main(printline, self.filename, dataBall)
 
     def aboutBox(self):
@@ -371,5 +362,5 @@ if __name__ == '__main__':
 
 # Complex trusses - ref. A. Hall and A. Kabaila, "Basic Concepts of
 # Structural Analyis", Pitman, UK ISBN 0 273 01108 1
-# Titles not displayed for help and show GPL - set self.filename!
+
     
