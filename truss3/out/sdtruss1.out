@@ -1,0 +1,185 @@
+================================
+SOLUTION FOR sdtruss1.dat
+================================
+# sdtruss1.dat - Statically Determinate Truss #1
+# "Basic Concepts of Structural Analysis" AS Hall and AP Kabaila,
+# Pitman Pub. (c) A Hall and AP Kabaila 1977 - aka "Basic Concepts".
+# Ref. "Basic Concepts" p49 Fig. 4.6
+# Flags - decoration for this program
+general
+#   noNodes, noMembers, noAuxiliaries
+g  4        5          3
+g  4
+nodes
+# Nodal list
+# t no  x  y
+t 1   0  0
+t 2   4  3
+t 3   4  0
+t 4   8  0
+t 5   3  3
+t 6   10 0
+t 7   8  3
+members
+t 1  1  2
+t 2  2  4
+t 3  3  2
+t 4  1  3
+t 5  3  4
+t 6  1  5
+t 7  4  6
+t 8  4  7
+loads
+# node  X load, Y load
+1     0      -6
+2     0      -14
+3     0      -12
+4     0      -8
+end
+
+*** Data Echo Finished ***
+echo of "general" flag.
+# sdtruss1.dat - Statically Determinate Truss #1
+# "Basic Concepts of Structural Analysis" AS Hall and AP Kabaila,
+# Pitman Pub. (c) A Hall and AP Kabaila 1977 - aka "Basic Concepts".
+# Ref. "Basic Concepts" p49 Fig. 4.6
+# Flags - decoration for this program
+ general
+#   noNodes, noMembers, noAuxiliaries
+ g  4        5          3
+ g  4
+noLoadLines = 4
+ nodes
+# Nodal list
+# t no  x  y
+  t 1   0  0
+Node freedoms 1 2
+  t 2   4  3
+Node freedoms 3 4
+  t 3   4  0
+Node freedoms 5 6
+  t 4   8  0
+Node freedoms 7 8
+  t 5   3  3
+Node freedoms 9 10
+  t 6   10 0
+Node freedoms 11 12
+  t 7   8  3
+Node freedoms 13 14
+nodes =
+1 (1, 0.0, 0.0, 1, 2)
+2 (2, 4.0, 3.0, 3, 4)
+3 (3, 4.0, 0.0, 5, 6)
+4 (4, 8.0, 0.0, 7, 8)
+5 (5, 3.0, 3.0, 9, 10)
+6 (6, 10.0, 0.0, 11, 12)
+7 (7, 8.0, 3.0, 13, 14)
+ members
+  t 1  1  2
+  t 2  2  4
+  t 3  3  2
+  t 4  1  3
+  t 5  3  4
+  t 6  1  5
+  t 7  4  6
+  t 8  4  7
+members =
+1 (1, 1, 2)
+2 (2, 2, 4)
+3 (3, 3, 2)
+4 (4, 1, 3)
+5 (5, 3, 4)
+6 (6, 1, 5)
+7 (7, 4, 6)
+8 (8, 4, 7)
+(1, 1, 2)
+member_no, locvec = 1   1 2 3 4
+direction cosines = 0.8 0.6
+(2, 2, 4)
+member_no, locvec = 2   3 4 7 8
+direction cosines = 0.8 -0.6
+(3, 3, 2)
+member_no, locvec = 3   5 6 3 4
+direction cosines = 0.0 1.0
+(4, 1, 3)
+member_no, locvec = 4   1 2 5 6
+direction cosines = 1.0 0.0
+(5, 3, 4)
+member_no, locvec = 5   5 6 7 8
+direction cosines = 1.0 0.0
+(6, 1, 5)
+member_no, locvec = 6   1 2 9 10
+direction cosines = 0.707106781187 0.707106781187
+(7, 4, 6)
+member_no, locvec = 7   7 8 11 12
+direction cosines = 1.0 0.0
+(8, 4, 7)
+member_no, locvec = 8   7 8 13 14
+direction cosines = 0.0 1.0
+memprops =
+1 [1, 2, 3, 4, 0.80000000000000004, 0.59999999999999998]
+2 [3, 4, 7, 8, 0.80000000000000004, -0.59999999999999998]
+3 [5, 6, 3, 4, 0.0, 1.0]
+4 [1, 2, 5, 6, 1.0, 0.0]
+5 [5, 6, 7, 8, 1.0, 0.0]
+6 [1, 2, 9, 10, 0.70710678118654757, 0.70710678118654757]
+7 [7, 8, 11, 12, 1.0, 0.0]
+8 [7, 8, 13, 14, 0.0, 1.0]
+Dimension of connection mat ndim =8
+
+Connection matrix
+Matrix of dimensions (8 x 8)
+  8.00000E-01   0.00000E+00   0.00000E+00   1.00000E+00   0.00000E+00
+  7.07107E-01   0.00000E+00   0.00000E+00
+
+  6.00000E-01   0.00000E+00   0.00000E+00   0.00000E+00   0.00000E+00
+  7.07107E-01   0.00000E+00   0.00000E+00
+
+ -8.00000E-01   8.00000E-01   0.00000E+00   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00   0.00000E+00
+
+ -6.00000E-01  -6.00000E-01  -1.00000E+00   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00   0.00000E+00
+
+  0.00000E+00   0.00000E+00   0.00000E+00  -1.00000E+00   1.00000E+00
+  0.00000E+00   0.00000E+00   0.00000E+00
+
+  0.00000E+00   0.00000E+00   1.00000E+00   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00   0.00000E+00
+
+  0.00000E+00  -8.00000E-01   0.00000E+00   0.00000E+00  -1.00000E+00
+  0.00000E+00   1.00000E+00   0.00000E+00
+
+  0.00000E+00   6.00000E-01   0.00000E+00   0.00000E+00   0.00000E+00
+  0.00000E+00   0.00000E+00   1.00000E+00
+
+ loads
+# node  X load, Y load
+  1     0      -6
+  2     0      -14
+  3     0      -12
+  4     0      -8
+
+Load matrix =
+Matrix of dimensions (8 x 1)
+ -0.00000E+00
+  6.00000E+00
+ -0.00000E+00
+  1.40000E+01
+ -0.00000E+00
+  1.20000E+01
+ -0.00000E+00
+  8.00000E+00
+
+Member Actions, [Ni | Ri] matrix.
+Matrix of dimensions (8 x 1)
+ -2.16667E+01
+ -2.16667E+01
+  1.20000E+01
+ -1.66667E+00
+ -1.66667E+00
+  2.68701E+01
+ -1.90000E+01
+  2.10000E+01
+
+matrix condition number = 6.20450567822

@@ -1,0 +1,34 @@
+#sdtruss0.dat
+# Simplest statically determined truss. By changing the x dimension
+# of node 6, it can be made unstable.  Analyse it for vertical force,
+# or horizontal force at node 1.
+  general
+#   noNodes, noMembers, noAuxiliaries, noLoadCases (always 1)
+ g  4        5          3              1
+# no of line in load entry
+ g  1
+ nodes
+# Nodal list
+# t no  x  y
+  t 1   2  4
+  t 2   0  2
+  t 3   2  2
+  t 4   4  2
+# auxiliaries
+  t 5   0   0
+  t 6   3.5 0
+  t 7   4   0
+ members
+  t 1  2  1
+  t 2  2  3
+  t 3  3  1
+  t 4  1  4
+  t 5  3  4
+# Reactions or Auxiliary members.
+  t 6  2  5
+  t 7  3  6
+  t 8  4  7
+ loads
+# node  X load, Y load
+  1     0       2
+  end

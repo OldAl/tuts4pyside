@@ -1,0 +1,13 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+<file alias="filenew.png">tango4truss/32x32/actions/document-new.png</file>
+<file alias="fileopen.png">tango4truss/32x32/actions/document-open.png</file>
+<file alias="filesave.png">tango4truss/32x32/devices/media-floppy.png</file>
+<file alias="filesaveas.png">tango4truss/32x32/actions/document-save-as.png</file>
+<file alias="solve.png">tango4truss/32x32/actions/edit-find-replace.png</file>
+<file alias="quit.png">tango4truss/32x32/actions/system-log-out.png</file>
+<file alias="licence.png">tango4truss/32x32/actions/address-book-new.png</file>
+<file alias="about.png">tango4truss/32x32/apps/preferences-system-session.png</file>
+<file alias="help.png">tango4truss/32x32/apps/help-browser.png</file>
+</qresource>
+</RCC>
