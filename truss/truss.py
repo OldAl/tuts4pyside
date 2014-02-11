@@ -20,7 +20,7 @@ from PySide.QtGui  import (QApplication, QMainWindow, QWidget,
 import qrc_truss
 import ncrunch
 
-__version__ = '0.1.5'
+__version__ = '0.1.6'
 
 class Truss(QMainWindow):
     def __init__(self, parent=None):
@@ -63,9 +63,9 @@ class Truss(QMainWindow):
         self.action_Open = QAction(self)
         self.action_Quit = QAction(self)
         self.action_About = QAction(self)
-        self.actionShow_GPL = QAction(self)
+        self.actionShow_CCPL = QAction(self)
         self.action_Solve = QAction(self)
-        self.action_GPL = QAction(self)
+        self.action_CCPL = QAction(self)
         self.action_Help = QAction(self)
         menu_File.addAction(self.action_New)
         menu_File.addAction(self.action_Open)
@@ -75,7 +75,7 @@ class Truss(QMainWindow):
         menu_File.addAction(self.action_Quit)
         self.menu_Solve.addAction(self.action_Solve)
         self.menu_Help.addAction(self.action_About)
-        self.menu_Help.addAction(self.action_GPL)
+        self.menu_Help.addAction(self.action_CCPL)
         self.menu_Help.addAction(self.action_Help)
         menubar.addAction(menu_File.menuAction())
         menubar.addAction(self.menu_Solve.menuAction())
@@ -96,7 +96,7 @@ class Truss(QMainWindow):
         self.action_Quit.setText("&Quit")        
         self.action_Solve.setText("&Solve")
         self.action_About.setText("&About")
-        self.action_GPL.setText("&GPL")
+        self.action_CCPL.setText("&CCPL")
         self.action_Help.setText("&Help")
         self.action_Quit.triggered.connect(self.close)
         allToolBar = self.addToolBar("AllToolBar") 
@@ -110,7 +110,7 @@ class Truss(QMainWindow):
         self.action_Save.triggered.connect(self.fileSave)
         self.action_Solve.triggered.connect(self.trussSolve)
         self.action_About.triggered.connect(self.aboutBox)
-        self.action_GPL.triggered.connect(self.displayGPL)
+        self.action_CCPL.triggered.connect(self.displayCCPL)
         self.action_Help.triggered.connect(self.help)
         self.plainTextEdit.textChanged.connect(self.setDirty)
         self.action_New = self.editAction(self.action_New, None,\
@@ -126,7 +126,7 @@ class Truss(QMainWindow):
                             'ctrl+L', 'solve', 'Solve Structure.')                                   
         self.action_About = self.editAction(self.action_About, None, 
                             'ctrl+B', 'about','Pop About Box.')                                  
-        self.action_GPL = self.editAction(self.action_GPL, None, 
+        self.action_CCPL = self.editAction(self.action_CCPL, None, 
                             'ctrl+G', 'licence', 'Show Licence') 
         self.action_Help = self.editAction(self.action_Help, None, 
                             'ctrl+H', 'help', 'Show Help Page.')
@@ -279,7 +279,8 @@ class Truss(QMainWindow):
                 """<b>Part of Structural Analysis.</b> v %s
                 <p>Copyright &copy; 2011 Algis Kabaila. 
                 All rights reserved in accordance with
-                GPL v2 or later - NO WARRANTIES!
+                Creative Commons Attribution Licence (CCPL) v3
+                or later - NO WARRANTIES!
                 <p>This progam finds bar forces in 
                 statically determinate trusses.                
                 <p>Python %s -  PySide version %s - Qt version %s on\
@@ -287,16 +288,16 @@ class Truss(QMainWindow):
                 PySide.__version__,  PySide.QtCore.__version__,
                 platform.system()))
               
-    def displayGPL(self):
-        '''Read and display GPL licence.'''
-        self.plainTextEdit.setPlainText(open('COPYING.txt').read())
+    def displayCCPL(self):
+        '''Read and display CCPL licence.'''
+        self.plainTextEdit.setPlainText(open('CCPL.txt').read())
         self.dirty = False
         self.filename = 'COPYING.txt'
-        self.updateStatus('GPL displayed.')
+        self.updateStatus('CCPL displayed.')
 
     def help(self):
         '''Read and display a help file- currently the README.txt.'''
-        self.plainTextEdit.setPlainText(open('README.txt').read())
+        self.plainTextEdit.setPlainText(open('README.md').read())
         self.dirty = False
         self.filename = 'README.txt'
         self.updateStatus('README displayed.')
@@ -366,6 +367,7 @@ if __name__ == '__main__':
 # 0.1.3 All done 4 examples. "Crunch is broken to methods. 2011-01-21
 # 0.1.4 Basic Matrix module (basemat) simplified. 2011-01-21
 # 0.1.5 Matrix module "retired", re-arranged all code. 2011-02-07
+# 0.1.6 References to GPL replaced by CCPL.  2014-02-11    
 
 # Complex trusses - ref. A. Hall and A. Kabaila, "Basic Concepts of
 # Structural Analyis", Pitman, UK ISBN 0 273 01108 1
