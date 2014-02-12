@@ -16,6 +16,9 @@ from numpy import linalg as la
 
 # Global functions
 
+
+
+
 def printerm(printline, a, LineLen=5):
     ''' Output (Matrix a, [Line length]) -> Output matrix a of size (m x n)
     according to function printline. Line length can be specified as 3-rd parameter.'''
@@ -196,25 +199,30 @@ class Cruncher():
         printline('matrix condition number = ' + str(conditionnumber))
         printline(' ')
 
-def main(printline, name, dataBall):
-    cruncher = Cruncher(name, printline, dataBall)
+def main(printline, filename, dataBall):
+    cruncher = Cruncher(filename, printline, dataBall)
     cruncher.crunch()
-    
-if __name__ == '__main__':
-    
-    def printline(line):
-        print(line)    
+    return
+
+def cli(printline):
     print('Usage: Give a name for data in the "dat" subdirectory')
     print('as program parameter. Default is "sdtruss1.dat"')
     if len(sys.argv) > 1:
-        name = sys.argv[1]
+        filename = sys.argv[1]
     else:
-        name = 'sdtruss1.dat'
+        filename = 'sdtruss1.dat'
     try:
-        with open('dat/' + name, 'r') as finput:
+        with open('dat/' + filename, 'r') as finput:
             dataBall = str(finput.read())       
     except IOError:
-        print('Failed to open given file name.')
-        sys.exit(1)
-    main(printline, name, dataBall)
+        print('\n\n\nFailed to open given file name. The program stops here.\n\n\n')
+        raise SystemExit('Failed to open file. Dah...')
+    main(printline, filename, dataBall)    
+    
+if __name__ == '__main__':
+
+    def printline(line):
+        print(line)    
+
+    cli(printline)
     

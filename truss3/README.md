@@ -24,7 +24,10 @@ To run the program with GUI, enter the following line of code
 
 *    python3 truss.py
 
-or for file manager, such as Dolphin, double click the truss.py file.    
+or for file manager, such as Dolphin, double click the truss.py file. 
+
+If there is an IO error, such as trying to open a non-existing file, the
+ program terminates with an obscure failure message, viz "dah..."    
 
 ### Basic Help
 

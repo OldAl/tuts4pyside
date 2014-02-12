@@ -213,10 +213,15 @@ class Truss(QMainWindow):
         else:
             flname = self.filename
             if flname:
-                with open(flname, 'w') as fl:
-                    fl.write(tempText)
-                self.dirty = False
-                self.updateStatus('File saved.')
+                try:
+                    with open(flname, 'w') as fl:
+                        fl.write(tempText)
+                    self.dirty = False
+                    self.updateStatus('File saved.')
+                except IOError:
+                    self.dirty = True
+                    self.updateStatus('File not saved.')
+                    return False
                 return True
             else:
                 self.updateStatus('Failed to save... ')
